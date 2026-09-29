@@ -12,85 +12,6 @@
                 <img id="grass-base" src="assets\Grass_001_COLOR.jpg">
                 <img id="grass-ambient-occlusion" src="assets\_Grass_001_OCC.jpg">
                 <img id="grass-normal" src="assets\Grass_001_NORM.jpg">
-
-                <canvas id="pitch-lines" width="1000" height="600"></canvas>
-                <script>
-                    (function () {
-                        var canvas = document.getElementById('pitch-lines');
-                        var ctx = canvas.getContext('2d');
-                        ctx.clearRect(0, 0, 1000, 600);
-                        ctx.strokeStyle = '#ffffff';
-                        ctx.fillStyle = '#ffffff';
-                        ctx.lineWidth = 4;
-
-                        // Outer boundary
-                        ctx.strokeRect(2, 2, 996, 596);
-
-                        // Halfway line
-                        ctx.beginPath();
-                        ctx.moveTo(500, 0);
-                        ctx.lineTo(500, 600);
-                        ctx.stroke();
-
-                        // Center circle + spot
-                        ctx.beginPath();
-                        ctx.arc(500, 300, 90, 0, Math.PI * 2);
-                        ctx.stroke();
-                        ctx.beginPath();
-                        ctx.arc(500, 300, 4, 0, Math.PI * 2);
-                        ctx.fill();
-
-                        // Penalty areas (16m deep x 40m wide)
-                        ctx.strokeRect(2, 100, 160, 400);          // left
-                        ctx.strokeRect(838, 100, 160, 400);        // right
-
-                        // Goal areas (5.5m deep x 18.32m wide)
-                        ctx.strokeRect(2, 208, 55, 184);           // left
-                        ctx.strokeRect(943, 208, 55, 184);         // right
-
-                        // Penalty spots
-                        ctx.beginPath();
-                        ctx.arc(110, 300, 4, 0, Math.PI * 2);
-                        ctx.fill();
-                        ctx.beginPath();
-                        ctx.arc(890, 300, 4, 0, Math.PI * 2);
-                        ctx.fill();
-
-                        // Penalty arcs (the "D")
-                        ctx.beginPath();
-                        ctx.arc(110, 300, 91.5, -0.9, 0.9);
-                        ctx.stroke();
-                        ctx.beginPath();
-                        ctx.arc(890, 300, 91.5, Math.PI - 0.9, Math.PI + 0.9);
-                        ctx.stroke();
-
-                        // Corner arcs
-                        ctx.beginPath(); ctx.arc(2, 2, 15, 0, Math.PI / 2); ctx.stroke();
-                        ctx.beginPath(); ctx.arc(998, 2, 15, Math.PI / 2, Math.PI); ctx.stroke();
-                        ctx.beginPath(); ctx.arc(2, 598, 15, -Math.PI / 2, 0); ctx.stroke();
-                        ctx.beginPath(); ctx.arc(998, 598, 15, Math.PI, Math.PI * 1.5); ctx.stroke();
-                    })();
-                </script>
-
-                <canvas id="sign-texture" width="1024" height="256"></canvas>
-                <script>
-                    (function () {
-                        var canvas = document.getElementById('sign-texture');
-                        var ctx = canvas.getContext('2d');
-                        ctx.fillStyle = '#0a2a4d';
-                        ctx.fillRect(0, 0, 1024, 256);
-                        ctx.strokeStyle = '#ffffff';
-                        ctx.lineWidth = 8;
-                        ctx.strokeRect(8, 8, 1008, 240);
-                        ctx.fillStyle = '#ffffff';
-                        ctx.font = 'bold 100px sans-serif';
-                        ctx.textAlign = 'center';
-                        ctx.textBaseline = 'middle';
-                        ctx.fillText('Soccer VR Training', 512, 128);
-                    })();
-                </script>
-            </a-assets>
-
             </a-assets>
 
             <a-plane
@@ -107,87 +28,111 @@
             > 
             </a-plane> 
 
-            <a-plane
-                material="src: #pitch-lines; transparent: true; alphaTest: 0.1; shader: flat"
-                position="0 0.02 0"
-                rotation="-90 0 0"
-                width="100"
-                height="60"
-            >
-            </a-plane>
-
             <a-sky 
                 color="lightskyblue" 
             > 
             </a-sky> 
 
-            <a-entity position="-48 0 0">
-                <a-box position="0 1.22 -3.66" width="0.12" height="2.44" depth="0.12" color="#ffffff"></a-box>
-                <a-box position="0 1.22 3.66" width="0.12" height="2.44" depth="0.12" color="#ffffff"></a-box>
-                <a-box position="0 2.44 0" width="0.12" height="0.12" depth="7.44" color="#ffffff"></a-box>
-            </a-entity>
+            <a-box color="white" position="-0 0 -35" roatation="0 0 0" width="100" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="0 0 35" rotation="0 0 0" width="100" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="50 0 0" rotation="0 90 0" width="70" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-50 0 0" rotation="0 90 0" width="70" height=".1" depth=".2"></a-box>
 
-            <!-- Goal, right end (x = 50) -->
-            <a-entity position="48 0 0">
-                <a-box position="0 1.22 -3.66" width="0.12" height="2.44" depth="0.12" color="#ffffff"></a-box>
-                <a-box position="0 1.22 3.66" width="0.12" height="2.44" depth="0.12" color="#ffffff"></a-box>
-                <a-box position="0 2.44 0" width="0.12" height="0.12" depth="7.44" color="#ffffff"></a-box>
-            </a-entity>
+            <a-box color="white" position="50 5 0" rotation="0 90 0" width="12" height=".2" depth=".2"></a-box>
+            <a-box color="white" position="50 2.5 -6" rotation="0 0 90" width="4.8" height=".2" depth=".2"></a-box>
+            <a-box color="white" position="50 2.5 6" rotation="0 0 90" width="4.8" height=".2" depth=".2"></a-box>
 
-             <a-entity position="0 0 -34">
-                <a-box position="-9 5 0" width="0.4" height="10" depth="0.4" color="#333333"></a-box>
-                <a-box position="9 5 0" width="0.4" height="10" depth="0.4" color="#333333"></a-box>
-                <a-plane
-                    position="0 9 0"
-                    width="18"
-                    height="4.5"
-                    material="src: #sign-texture; shader: flat">
-                </a-plane>
-            </a-entity>
+            <a-box color="white" position="-50 5 0" rotation="0 90 0" width="12" height=".2" depth=".2"></a-box>
+            <a-box color="white" position="-50 2.5 -6" rotation="0 0 90" width="4.8" height=".2" depth=".2"></a-box>
+            <a-box color="white" position="-50 2.5 6" rotation="0 0 90" width="4.8" height=".2" depth=".2"></a-box>
 
-            <!-- ===================== STADIUM ===================== -->
+            <a-box color="grey" position="0 2.5 -50" rotation="0 0 0" width="80" height="5" depth="5"></a-box>
+            <a-box color="grey" position="0 7.5 -55" rotation="0 0 0" width="80" height="5" depth="5"></a-box>
+            <a-box color="grey" position="0 12.5 -60" rotation="0 0 0" width="80" height="5" depth="5"></a-box>
 
-            <!-- Far-side stand (z negative, behind the sign) -->
-            <a-entity position="0 0 0">
-                <a-box position="0 1 -38" width="90" height="2" depth="4" color="#7d7d7d"></a-box>
-                <a-box position="0 2.5 -42" width="90" height="3" depth="4" color="#5f5f5f"></a-box>
-                <a-box position="0 4.25 -46" width="90" height="4.5" depth="4" color="#7d7d7d"></a-box>
-                <a-box position="0 6.25 -50" width="90" height="5.5" depth="4" color="#5f5f5f"></a-box>
-                <!-- roof over top tier -->
-                <a-box position="0 9.2 -50" width="92" height="0.3" depth="8" color="#1a1a1a" rotation="-8 0 0"></a-box>
-            </a-entity>
+            <a-box color="grey" position="0 2.5 50" rotation="0 0 0" width="80" height="5" depth="5"></a-box>
+            <a-box color="grey" position="0 7.5 55" rotation="0 0 0" width="80" height="5" depth="5"></a-box>
+            <a-box color="grey" position="0 12.5 60" rotation="0 0 0" width="80" height="5" depth="5"></a-box>
 
-            <!-- Near-side stand (z positive, opposite the entrance) -->
-            <a-entity position="0 0 0">
-                <a-box position="0 1 38" width="90" height="2" depth="4" color="#7d7d7d"></a-box>
-                <a-box position="0 2.5 42" width="90" height="3" depth="4" color="#5f5f5f"></a-box>
-                <a-box position="0 4.25 46" width="90" height="4.5" depth="4" color="#7d7d7d"></a-box>
-                <a-box position="0 6.25 50" width="90" height="5.5" depth="4" color="#5f5f5f"></a-box>
-                <a-box position="0 9.2 50" width="92" height="0.3" depth="8" color="#1a1a1a" rotation="8 0 0"></a-box>
-            </a-entity>
+            <a-box color="grey" position="60 2.5 0" rotation="0 90 0" width="60" height="5" depth="5"></a-box>
+            <a-box color="grey" position="65 7.5 0" rotation="0 90 0" width="60" height="5" depth="5"></a-box>
 
-            <!-- Corner floodlight poles: cylinder pole + sphere light fixture + cone spire -->
-            <a-entity position="-55 0 -35">
-                <a-cylinder position="0 8 0" radius="0.3" height="16" color="#444444"></a-cylinder>
-                <a-sphere position="0 16.3 0" radius="1" color="#fff8dc"></a-sphere>
-                <a-cone position="0 17.3 0" radius-bottom="0.4" radius-top="0" height="1" color="#444444"></a-cone>
-            </a-entity>
-            <a-entity position="55 0 -35">
-                <a-cylinder position="0 8 0" radius="0.3" height="16" color="#444444"></a-cylinder>
-                <a-sphere position="0 16.3 0" radius="1" color="#fff8dc"></a-sphere>
-                <a-cone position="0 17.3 0" radius-bottom="0.4" radius-top="0" height="1" color="#444444"></a-cone>
-            </a-entity>
-            <a-entity position="-55 0 35">
-                <a-cylinder position="0 8 0" radius="0.3" height="16" color="#444444"></a-cylinder>
-                <a-sphere position="0 16.3 0" radius="1" color="#fff8dc"></a-sphere>
-                <a-cone position="0 17.3 0" radius-bottom="0.4" radius-top="0" height="1" color="#444444"></a-cone>
-            </a-entity>
-            <a-entity position="55 0 35">
-                <a-cylinder position="0 8 0" radius="0.3" height="16" color="#444444"></a-cylinder>
-                <a-sphere position="0 16.3 0" radius="1" color="#fff8dc"></a-sphere>
-                <a-cone position="0 17.3 0" radius-bottom="0.4" radius-top="0" height="1" color="#444444"></a-cone>
-            </a-entity>
+            <a-box color="grey" position="-60 2.5 0" rotation="0 90 0" width="60" height="5" depth="5"></a-box>
+            <a-box color="grey" position="-65 7.5 0" rotation="0 90 0" width="60" height="5" depth="5"></a-box>
 
+            <a-box color="white" position="0 0 0" width="0.2" height=".1" depth="70"></a-box>
+
+            <a-cylinder color="white" position="0 0 0" radius="0.35" height=".1"></a-cylinder>
+
+            <a-box color="white" position="9 0 0"        rotation="0 90 0"   width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="8.69 0 2.33"  rotation="0 75 0"   width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="7.79 0 4.5"   rotation="0 60 0"   width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="6.36 0 6.36"  rotation="0 45 0"   width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="4.5 0 7.79"   rotation="0 30 0"   width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="2.33 0 8.69"  rotation="0 15 0"   width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="0 0 9"        rotation="0 0 0"    width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-2.33 0 8.69" rotation="0 -15 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-4.5 0 7.79"  rotation="0 -30 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-6.36 0 6.36" rotation="0 -45 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-7.79 0 4.5"  rotation="0 -60 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-8.69 0 2.33" rotation="0 -75 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-9 0 0"       rotation="0 -90 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-8.69 0 -2.33" rotation="0 -105 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-7.79 0 -4.5"  rotation="0 -120 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-6.36 0 -6.36" rotation="0 -135 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-4.5 0 -7.79"  rotation="0 -150 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-2.33 0 -8.69" rotation="0 -165 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="0 0 -9"        rotation="0 -180 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="2.33 0 -8.69"  rotation="0 -195 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="4.5 0 -7.79"   rotation="0 -210 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="6.36 0 -6.36"  rotation="0 -225 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="7.79 0 -4.5"   rotation="0 -240 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="8.69 0 -2.33"  rotation="0 -255 0" width="2.4" height=".1" depth=".2"></a-box>
+
+            <a-box color="white" position="33.5 0 0"   width=".2"  height=".1" depth="40"></a-box>
+            <a-box color="white" position="41.75 0 20"  width="16.5" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="41.75 0 -20" width="16.5" height=".1" depth=".2"></a-box>
+
+            <a-box color="white" position="44.5 0 0"    width=".2"  height=".1" depth="18"></a-box>
+            <a-box color="white" position="47.25 0 9"   width="5.5" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="47.25 0 -9"  width="5.5" height=".1" depth=".2"></a-box>
+
+            <a-cylinder color="white" position="39 0 0" radius="0.3" height=".1"></a-cylinder>
+
+            <a-box color="white" position="29.85 0 0"    rotation="0 90 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="30.16 0 -2.37" rotation="0 75 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="30.16 0 2.37"  rotation="0 105 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="31.08 0 -4.58" rotation="0 60 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="31.08 0 4.58"  rotation="0 120 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="32.53 0 -6.47" rotation="0 45 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="32.53 0 6.47"  rotation="0 135 0" width="2.4" height=".1" depth=".2"></a-box>
+
+            <a-box color="white" position="-33.5 0 0"   width=".2"  height=".1" depth="40"></a-box>
+            <a-box color="white" position="-41.75 0 20"  width="16.5" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-41.75 0 -20" width="16.5" height=".1" depth=".2"></a-box>
+
+            <a-box color="white" position="-44.5 0 0"    width=".2"  height=".1" depth="18"></a-box>
+            <a-box color="white" position="-47.25 0 9"   width="5.5" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-47.25 0 -9"  width="5.5" height=".1" depth=".2"></a-box>
+
+            <a-cylinder color="white" position="-39 0 0" radius="0.3" height=".1"></a-cylinder>
+
+            <a-box color="white" position="-29.85 0 0"    rotation="0 90 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-30.16 0 2.37"  rotation="0 75 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-30.16 0 -2.37" rotation="0 105 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-31.08 0 4.58"  rotation="0 60 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-31.08 0 -4.58" rotation="0 120 0" width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-32.53 0 6.47"  rotation="0 45 0"  width="2.4" height=".1" depth=".2"></a-box>
+            <a-box color="white" position="-32.53 0 -6.47" rotation="0 135 0" width="2.4" height=".1" depth=".2"></a-box>
+
+            <a-cylinder color="white" position="50 0.75 35"   radius="0.04" height="1.5"></a-cylinder>
+            <a-cone color="yellow" position="50 1.75 35"   radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
+            <a-cylinder color="white" position="-50 0.75 35"  radius="0.04" height="1.5"></a-cylinder>
+            <a-cone color="yellow" position="-50 1.75 35"  radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
+            <a-cylinder color="white" position="50 0.75 -35"  radius="0.04" height="1.5"></a-cylinder>
+            <a-cone color="yellow" position="50 1.75 -35"  radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
+            <a-cylinder color="white" position="-50 0.75 -35" radius="0.04" height="1.5"></a-cylinder>
+            <a-cone color="yellow" position="-50 1.75 -35" radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
         </a-scene>
     </body>
 </html>
