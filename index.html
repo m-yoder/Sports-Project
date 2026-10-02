@@ -12,7 +12,74 @@
                 <img id="grass-base" src="assets\Grass_001_COLOR.jpg">
                 <img id="grass-ambient-occlusion" src="assets\_Grass_001_OCC.jpg">
                 <img id="grass-normal" src="assets\Grass_001_NORM.jpg">
+                <img id="metal-base" src="assets\Metal_Base_Scratched_001_basecolor.png">
+                <img id="metal-ambient-occlusion" src="assets\Metal_Base_Scratched_001_ambientOcclusion.png">
+                <img id="metal-normal" src="assets\Metal_Base_Scratched_001_normal.png">
+                <img id="sky" src="assets\photo-sea-sky_58702-10663.jpg">
+                <img id="roof-base" src="assets\Stylized_Roof_Tiles_002_basecolor.png">
+                <img id="roof-ambient-occlusion" src="assets\Stylized_Roof_Tiles_002_ambientOcclusion.png">
+                <img id="roof-normal" src="assets\Stylized_Roof_Tiles_002_normal.png">
+                <img id="stone-base" src="assets\Concrete_Wall_014_basecolor.png">
+                <img id="stone-ambient-occlusion" src="assets\Concrete_Wall_014_ambientOcclusion.png">
+                <img id="stone-normal" src="assets\Concrete_Wall_014_normal.png">
             </a-assets>
+
+            <a-assets-item
+                id="soccer_ball"
+                src="assets\soccerball.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="flag"
+                src="assets\flag1.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="man"
+                src="assets\man.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="city"
+                src="assets\city.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building1"
+                src="assets\Building1.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building2"
+                src="assets\Building2.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building3"
+                src="assets\Building3.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building4"
+                src="assets\Building4.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building5"
+                src="assets\Building5.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building6"
+                src="assets\Building6.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building7"
+                src="assets\Building7.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building8"
+                src="assets\Building8.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building9"
+                src="assets\Building9.glb">
+            </a-assets-item>
+            <a-assets-item
+                id="Building10"
+                src="assets\Building10.glb">
+            </a-assets-item>
 
             <a-plane
                 material= "src: #grass-base; 
@@ -28,9 +95,9 @@
             > 
             </a-plane> 
 
-            <a-sky 
-                color="lightskyblue" 
-            > 
+            <a-sky
+                src="#sky"
+            >
             </a-sky> 
 
             <a-box color="white" position="-0 0 -35" roatation="0 0 0" width="100" height=".1" depth=".2"></a-box>
@@ -111,96 +178,422 @@
             <a-box color="white" position="-32.53 0 6.47"  rotation="0 45 0"  width="2.4" height=".1" depth=".2"></a-box>
             <a-box color="white" position="-32.53 0 -6.47" rotation="0 135 0" width="2.4" height=".1" depth=".2"></a-box>
 
-            <a-cylinder color="white" position="50 0.75 35"   radius="0.04" height="1.5"></a-cylinder>
-            <a-cone color="darkslategrey" position="50 1.75 35"   radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
-            <a-cylinder color="white" position="-50 0.75 35"  radius="0.04" height="1.5"></a-cylinder>
-            <a-cone color="darkslategrey" position="-50 1.75 35"  radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
-            <a-cylinder color="white" position="50 0.75 -35"  radius="0.04" height="1.5"></a-cylinder>
-            <a-cone color="darkslategrey" position="50 1.75 -35"  radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
-            <a-cylinder color="white" position="-50 0.75 -35" radius="0.04" height="1.5"></a-cylinder>
-            <a-cone color="darkslategrey" position="-50 1.75 -35" radius-bottom="0.3" radius-top="0" height="0.5"></a-cone>
-
-
-            <a-box color="grey" position="0 0.75 -41.5" width="100" height="1.5" depth="3"></a-box>
-            <a-box color="grey" position="0 1.5 -44.5"  width="100" height="3"   depth="3"></a-box>
-            <a-box color="grey" position="0 2.25 -47.5" width="100" height="4.5" depth="3"></a-box>
-            <a-box color="grey" position="0 3 -50.5"    width="100" height="6"   depth="3"></a-box>
-            <a-box color="grey" position="0 3.75 -53.5" width="100" height="7.5" depth="3"></a-box>
-            <a-box color="grey" position="0 4.5 -56.5"  width="100" height="9"   depth="3"></a-box>
-            <a-box color="darkslategrey" position="0 1.55 -41.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 3.05 -44.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 4.55 -47.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 6.05 -50.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 7.55 -53.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 9.05 -56.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="dimgrey" position="0 6 -58.5" width="100" height="12" depth="1"></a-box>
-            <a-box color="darkslategrey" position="0 12.25 -50" width="100" height=".5" depth="22"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 0.75 -41.5" width="100" height="1.5" depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 1.5 -44.5"  width="100" height="3"   depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 2.25 -47.5" width="100" height="4.5" depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 3 -50.5"    width="100" height="6"   depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 3.75 -53.5" width="100" height="7.5" depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 4.5 -56.5"  width="100" height="9"   depth="3"></a-box>
+            <a-box color="black" position="0 1.55 -41.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 3.05 -44.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 4.55 -47.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 6.05 -50.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 7.55 -53.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 9.05 -56.5" width="96" height=".1" depth="2"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="0 6 -58.5" width="100" height="12" depth="1"></a-box>
+            <a-box material= "src: #roof-base; 
+                    repeat: 100 5; 
+                    ambientOcclusionMap: #roof-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 5; 
+                    normalMap: #roof-normal; 
+                    normalTextureRepeat: 100 5" position="0 12.25 -50" width="100" height=".5" depth="22"></a-box>
             <a-cylinder color="lightgrey" position="-40 6 -39.5" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="-20 6 -39.5" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="0 6 -39.5"   radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="20 6 -39.5"  radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="40 6 -39.5"  radius="0.3" height="12"></a-cylinder>
 
-            <a-box color="grey" position="0 0.75 41.5" width="100" height="1.5" depth="3"></a-box>
-            <a-box color="grey" position="0 1.5 44.5"  width="100" height="3"   depth="3"></a-box>
-            <a-box color="grey" position="0 2.25 47.5" width="100" height="4.5" depth="3"></a-box>
-            <a-box color="grey" position="0 3 50.5"    width="100" height="6"   depth="3"></a-box>
-            <a-box color="grey" position="0 3.75 53.5" width="100" height="7.5" depth="3"></a-box>
-            <a-box color="grey" position="0 4.5 56.5"  width="100" height="9"   depth="3"></a-box>
-            <a-box color="darkslategrey" position="0 1.55 41.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 3.05 44.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 4.55 47.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 6.05 50.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 7.55 53.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="darkslategrey" position="0 9.05 56.5" width="96" height=".1" depth="2"></a-box>
-            <a-box color="dimgrey" position="0 6 58.5" width="100" height="12" depth="1"></a-box>
-            <a-box color="darkslategrey" position="0 12.25 50" width="100" height=".5" depth="22"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 0.75 41.5" width="100" height="1.5" depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 1.5 44.5"  width="100" height="3"   depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 2.25 47.5" width="100" height="4.5" depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 3 50.5"    width="100" height="6"   depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 3.75 53.5" width="100" height="7.5" depth="3"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="0 4.5 56.5"  width="100" height="9"   depth="3"></a-box>
+            <a-box color="black" position="0 1.55 41.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 3.05 44.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 4.55 47.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 6.05 50.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 7.55 53.5" width="96" height=".1" depth="2"></a-box>
+            <a-box color="black" position="0 9.05 56.5" width="96" height=".1" depth="2"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="0 6 58.5" width="100" height="12" depth="1"></a-box>
+            <a-box material= "src: #roof-base; 
+                    repeat: 100 5; 
+                    ambientOcclusionMap: #roof-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 5; 
+                    normalMap: #roof-normal; 
+                    normalTextureRepeat: 100 5" position="0 12.25 50" width="100" height=".5" depth="22"></a-box>
             <a-cylinder color="lightgrey" position="-40 6 39.5" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="-20 6 39.5" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="0 6 39.5"   radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="20 6 39.5"  radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="40 6 39.5"  radius="0.3" height="12"></a-cylinder>
 
-            <a-box color="grey" position="56.5 0.75 0" width="3" height="1.5" depth="70"></a-box>
-            <a-box color="grey" position="59.5 1.5 0"  width="3" height="3"   depth="70"></a-box>
-            <a-box color="grey" position="62.5 2.25 0" width="3" height="4.5" depth="70"></a-box>
-            <a-box color="grey" position="65.5 3 0"    width="3" height="6"   depth="70"></a-box>
-            <a-box color="grey" position="68.5 3.75 0" width="3" height="7.5" depth="70"></a-box>
-            <a-box color="grey" position="71.5 4.5 0"  width="3" height="9"   depth="70"></a-box>
-            <a-box color="darkslategrey" position="56.5 1.55 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="59.5 3.05 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="62.5 4.55 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="65.5 6.05 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="68.5 7.55 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="71.5 9.05 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="dimgrey" position="73.5 6 0" width="1" height="12" depth="70"></a-box>
-            <a-box color="darkslategrey" position="65 12.25 0" width="22" height=".5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="56.5 0.75 0" width="3" height="1.5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="59.5 1.5 0"  width="3" height="3"   depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="62.5 2.25 0" width="3" height="4.5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="65.5 3 0"    width="3" height="6"   depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="68.5 3.75 0" width="3" height="7.5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="71.5 4.5 0"  width="3" height="9"   depth="70"></a-box>
+            <a-box color="black" position="56.5 1.55 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="59.5 3.05 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="62.5 4.55 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="65.5 6.05 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="68.5 7.55 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="71.5 9.05 0" width="2" height=".1" depth="66"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="73.5 6 0" width="1" height="12" depth="70"></a-box>
+            <a-box material= "src: #roof-base; 
+                    repeat: 100 5; 
+                    ambientOcclusionMap: #roof-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 5; 
+                    normalMap: #roof-normal; 
+                    normalTextureRepeat: 100 5" position="65 12.25 0" width="22" height=".5" depth="70"></a-box>
             <a-cylinder color="lightgrey" position="54.5 6 -30" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="54.5 6 -15" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="54.5 6 0"   radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="54.5 6 15"  radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="54.5 6 30"  radius="0.3" height="12"></a-cylinder>
 
-            <a-box color="grey" position="-56.5 0.75 0" width="3" height="1.5" depth="70"></a-box>
-            <a-box color="grey" position="-59.5 1.5 0"  width="3" height="3"   depth="70"></a-box>
-            <a-box color="grey" position="-62.5 2.25 0" width="3" height="4.5" depth="70"></a-box>
-            <a-box color="grey" position="-65.5 3 0"    width="3" height="6"   depth="70"></a-box>
-            <a-box color="grey" position="-68.5 3.75 0" width="3" height="7.5" depth="70"></a-box>
-            <a-box color="grey" position="-71.5 4.5 0"  width="3" height="9"   depth="70"></a-box>
-            <a-box color="darkslategrey" position="-56.5 1.55 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="-59.5 3.05 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="-62.5 4.55 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="-65.5 6.05 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="-68.5 7.55 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="darkslategrey" position="-71.5 9.05 0" width="2" height=".1" depth="66"></a-box>
-            <a-box color="dimgrey" position="-73.5 6 0" width="1" height="12" depth="70"></a-box>
-            <a-box color="darkslategrey" position="-65 12.25 0" width="22" height=".5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="-56.5 0.75 0" width="3" height="1.5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="-59.5 1.5 0"  width="3" height="3"   depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="-62.5 2.25 0" width="3" height="4.5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="-65.5 3 0"    width="3" height="6"   depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="-68.5 3.75 0" width="3" height="7.5" depth="70"></a-box>
+            <a-box material= "src: #metal-base; 
+                    repeat: 100 1; 
+                    ambientOcclusionMap: #metal-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 1; 
+                    normalMap: #metal-normal; 
+                    normalTextureRepeat: 100 1" position="-71.5 4.5 0"  width="3" height="9"   depth="70"></a-box>
+            <a-box color="black" position="-56.5 1.55 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="-59.5 3.05 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="-62.5 4.55 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="-65.5 6.05 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="-68.5 7.55 0" width="2" height=".1" depth="66"></a-box>
+            <a-box color="black" position="-71.5 9.05 0" width="2" height=".1" depth="66"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="-73.5 6 0" width="1" height="12" depth="70"></a-box>
+            <a-box material= "src: #roof-base; 
+                    repeat: 100 5; 
+                    ambientOcclusionMap: #roof-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 5; 
+                    normalMap: #roof-normal; 
+                    normalTextureRepeat: 100 5" position="-65 12.25 0" width="22" height=".5" depth="70"></a-box>
             <a-cylinder color="lightgrey" position="-54.5 6 -30" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="-54.5 6 -15" radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="-54.5 6 0"   radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="-54.5 6 15"  radius="0.3" height="12"></a-cylinder>
             <a-cylinder color="lightgrey" position="-54.5 6 30"  radius="0.3" height="12"></a-cylinder>
 
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="62 6 47"   rotation="0 45 0"  width="34" height="12" depth="1"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="-62 6 47"  rotation="0 -45 0" width="34" height="12" depth="1"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="62 6 -47"  rotation="0 -45 0" width="34" height="12" depth="1"></a-box>
+            <a-box material= "src: #stone-base; 
+                    repeat: 100 20; 
+                    ambientOcclusionMap: #stone-ambient-occlusion; 
+                    ambientOcclusionTextureRepeat: 100 20; 
+                    normalMap: #stone-normal; 
+                    normalTextureRepeat: 100 20" position="-62 6 -47" rotation="0 45 0"  width="34" height="12" depth="1"></a-box>
+
+
+            <a-box color="white" position="52.5 2.5 -5" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 -4" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 -3" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 -2" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 -1" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 0"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 1"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 2"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 3"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 4"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 5"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 1 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="52.5 2 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="52.5 3 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="52.5 4 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="51.25 5 -5" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 -4" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 -3" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 -2" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 -1" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 0"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 1"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 2"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 3"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 4"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 5"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51 5 0"   width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="52.5 5 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="51.25 1 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 2 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 3 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 4 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 1 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 2 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 3 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 4 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51 2.5 -6"   width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 -6" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="51 2.5 6"    width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="52.5 2.5 6"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="51.25 5 6"  width="2.5" height=".03" depth=".03"></a-box>
+
+
+
+            <a-box color="white" position="-52.5 2.5 -5" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 -4" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 -3" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 -2" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 -1" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 0"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 1"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 2"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 3"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 4"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 5"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 1 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="-52.5 2 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="-52.5 3 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="-52.5 4 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="-51.25 5 -5" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 -4" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 -3" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 -2" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 -1" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 0"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 1"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 2"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 3"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 4"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 5"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51 5 0"   width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="-52.5 5 0" width=".03" height=".03" depth="12"></a-box>
+            <a-box color="white" position="-51.25 1 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 2 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 3 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 4 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 1 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 2 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 3 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 4 6"  width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51 2.5 -6"   width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 -6" width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-51 2.5 6"    width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-52.5 2.5 6"  width=".03" height="5" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 -6" width="2.5" height=".03" depth=".03"></a-box>
+            <a-box color="white" position="-51.25 5 6"  width="2.5" height=".03" depth=".03"></a-box>
+
+            <a-entity
+                gltf-model="#soccer_ball"
+                position="0 .3 0"
+                rotation="0 0 0"
+                scale="0.5 0.5 0.5"
+                >
+            </a-entity>
+
+            <a-entity
+                gltf-model="#flag"
+                position="50 2 35"
+                rotation="0 0 0"
+                scale="3 2.5 3"
+                >
+            </a-entity>
+            <a-entity
+                gltf-model="#flag"
+                position="50 2 -35"
+                rotation="0 0 0"
+                scale="3 2.5 3"
+                >
+            </a-entity>
+            <a-entity
+                gltf-model="#flag"
+                position="-50 2 35"
+                rotation="0 0 0"
+                scale="3 2.5 3"
+                >
+            </a-entity>
+            <a-entity
+                gltf-model="#flag"
+                position="-50 2 -35"
+                rotation="0 0 0"
+                scale="3 2.5 3"
+                >
+            </a-entity>
+
+            <a-entity gltf-model="#city" position="-160 0 100" rotation="0 0 0"   scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="-80 0 100"  rotation="0 0 0"   scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="0 0 100"    rotation="0 0 0"   scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="80 0 100"   rotation="0 0 0"   scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="160 0 100"  rotation="0 0 0"   scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="-160 0 -100" rotation="0 180 0" scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="-80 0 -100"  rotation="0 180 0" scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="0 0 -100"    rotation="0 180 0" scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="80 0 -100"   rotation="0 180 0" scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="160 0 -100"  rotation="0 180 0" scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="120 0 0"  rotation="0 -90 0" scale="20 20 20"></a-entity>
+            <a-entity gltf-model="#city" position="-120 0 0" rotation="0 90 0"  scale="20 20 20"></a-entity>
+
+<a-entity gltf-model="#Building1" position="80 0 60" rotation="0 0 0" scale="30 30 30"></a-entity>
+<a-entity gltf-model="#Building2" position="-80 0 -60" rotation="0 90 0" scale="15 15 15"></a-entity>
+<a-entity gltf-model="#Building3" position="-90 11 -20" rotation="0 0 0" scale="50 50 50"></a-entity>
+<a-entity gltf-model="#Building3" position="25 11 80" rotation="0 90 0" scale="60 60 60"></a-entity>
+<a-entity gltf-model="#Building4" position="0 0 -80" rotation="0 0 0" scale="20 20 20"></a-entity>
+<a-entity gltf-model="#Building4" position="-90 0 20" rotation="0 90 0" scale="20 20 20"></a-entity>
+<a-entity gltf-model="#Building5" position="100 0 0" rotation="0 90 0" scale="30 30 30"></a-entity>
+<a-entity gltf-model="#Building6" position="-80 0 60" rotation="0 90 0" scale="35 35 35"></a-entity>
+<a-entity gltf-model="#Building7" position="80 0 -60" rotation="0 0 0" scale="15 15 15"></a-entity>
+<a-entity gltf-model="#Building8" position="-30 0 80" rotation="0 0 0" scale="25 25 25"></a-entity>
+<a-entity gltf-model="#Building9" position="-40 0 -80" rotation="0 0 0" scale="20 20 20"></a-entity>
+<a-entity gltf-model="#Building10" position="40 0 -80" rotation="0 180 0" scale="20 20 20"></a-entity>
 
         </a-scene>
     </body>
